@@ -5,10 +5,9 @@ class Matrix:
     def __init__(self, size: int):
         self.matrix = np.zeros((size, size), dtype=int)
 
-    @staticmethod
-    def _mirror_matrix(seq):
-        output = list(seq[::-1])
-        output.extend(seq[1:])
+    def _mirror_matrix(self):
+        output = list(self.matrix[::-1])
+        output.extend(self.matrix[1:])
         return output
 
     def draw_half_heart(self):
@@ -26,4 +25,4 @@ class Matrix:
                 break
 
     def make_heart(self):
-        self.matrix = np.asarray(self._mirror_matrix(self.matrix)).transpose()
+        self.matrix = np.asarray(self._mirror_matrix()).transpose()
