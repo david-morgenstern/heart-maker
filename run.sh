@@ -1,3 +1,3 @@
 #!/usr/bin/bash
 
-streamlit run heart.py
+streamlit run heart/draw.py
